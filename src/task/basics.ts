@@ -64,3 +64,29 @@ if (isAdmin) {
 } else {
     console.log("isAdmin is false.");
 }
+
+
+
+// ** BONUS ** //
+//let n: number = 5;
+function printTree (n: number): void {
+    for (let i: number = 0; i <= n; i++) {
+        var star: string = "*";
+        var space: string = " ";
+        for (let j: number = 1; j <= i; j++) {
+            star += '**';
+        }
+        var spaceBefore: string = space.repeat(n - i);
+        star = spaceBefore + star;
+        console.log(star);
+    }
+
+
+    for (let k: number = 1; k <= n; k++) {
+        var spaceHeight: string = " ";
+        var spaceBeforeHeight: string = spaceHeight.repeat(n - 1);
+        console.log(spaceBeforeHeight + "*");
+    }
+}
+
+printTree(5);
