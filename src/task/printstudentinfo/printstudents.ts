@@ -54,8 +54,7 @@ const listOfStudents: Student[] = [Anton, Berta, Caeser];
 console.log(listOfStudents);
 
 const printAllStudents = (students: Student[]): void => {
-    for (let i: number = 0; i < students.length; i++)
-    printAStudent(students[i])
+    students.forEach(student => printAStudent(student));
 }
 
 // Test printAllStudents
